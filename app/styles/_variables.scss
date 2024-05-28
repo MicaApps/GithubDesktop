@@ -5,11 +5,14 @@
 // Primer colors, see https://github.com/primer/primer-css/blob/master/modules/primer-support/lib/variables/color-system.scss
 @import '~primer-support/lib/variables/color-system.scss';
 
+// 这里面是暗色的css变量,重写了需要改变的颜色
 // Extracted as a SCSS variable so that we can define the --overlay-background-color
 // on both the :root and the ::backdrop scope. The ::backdrop pseudo-element
 // doesn't inherit :root, see
 // https://bugs.chromium.org/p/chromium/issues/detail?id=594096
-$overlay-background-color: rgba(0, 0, 0, 0.4);
+
+// 蒙层颜色变量
+$overlay-background-color: rgba(0, 0, 0, 0);
 
 :root {
   --color-new: #{$green-600};
@@ -21,7 +24,9 @@ $overlay-background-color: rgba(0, 0, 0, 0.4);
   --text-color: #{$gray-900};
   --text-secondary-color: #{$gray-500};
   --text-secondary-color-muted: #{lighten($gray-500, 30%)};
+  // 作为大部分的背景颜色,包括但不限于目前已知的:上方工具栏的弹出框的背景颜色,主背景颜色
   --background-color: #{$white};
+  // --background-color: rgba(255, 255, 255, 0.85);
 
   --button-height: 25px;
 
@@ -223,7 +228,9 @@ $overlay-background-color: rgba(0, 0, 0, 0.4);
    * The height of the title bar area on Win32 platforms
    * If changed, update titleBarHeight in 'app/src/ui/dialog/dialog.tsx'
   */
+  // 上方工具栏高度
   --win32-title-bar-height: 28px;
+  // --win32-title-bar-height: 48px;
   --win32-title-bar-background-color: #{$gray-900};
 
   /**
@@ -231,8 +238,11 @@ $overlay-background-color: rgba(0, 0, 0, 0.4);
    * If changed, update titleBarHeight in 'app/src/ui/dialog/dialog.tsx'
   */
   --darwin-title-bar-height: 22px;
+  // --darwin-title-bar-height: 48px;
 
-  --spacing: 10px;
+  //上方工具栏每个选项的间距
+  // --spacing: 10px;
+  --spacing: 16px;
   --spacing-double: calc(var(--spacing) * 2);
   --spacing-triple: calc(var(--spacing) * 3);
   --spacing-quad: calc(var(--spacing) * 4);
@@ -290,10 +300,15 @@ $overlay-background-color: rgba(0, 0, 0, 0.4);
   --app-menu-button-hover-color: var(--toolbar-button-hover-color);
   --app-menu-button-hover-background-color: var(--toolbar-button-hover-background-color);
   --app-menu-button-active-color: var(--toolbar-button-active-color);
+  // 顶部按钮激活时的颜色
   --app-menu-button-active-background-color: var(--toolbar-button-active-background-color);
   --app-menu-pane-color: var(--text-color);
   --app-menu-pane-secondary-color: var(--text-secondary-color);
-  --app-menu-pane-background-color: var(--toolbar-button-active-background-color);
+  // 顶部弹出框的背景颜色
+  // --app-menu-pane-background-color: var(--toolbar-button-active-background-color);
+  --app-menu-pane-background-color: rgba(255, 255, 255, 0.65);
+  // 边框
+  --app-menu-pane-border-color: rgba(0, 0, 0, 0.0578);
   --app-menu-divider-color: var(--box-border-color);
 
   /**
