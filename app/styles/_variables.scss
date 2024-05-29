@@ -168,7 +168,9 @@ $overlay-background-color: rgba(0, 0, 0, 0);
   /**
    * Background color for selected boxes with active keyboard focus
    */
-  --box-selected-active-background-color: #{$blue};
+//    上方工具栏弹出框的按钮背景hover效果
+//   --box-selected-active-background-color: #{$blue};
+  --box-selected-active-background-color: rgba(0,0,0,0.0373);
 
   /**
    * Border styles for selected boxes with active keyboard focus
@@ -178,7 +180,9 @@ $overlay-background-color: rgba(0, 0, 0, 0);
   /**
    * Text color for selected boxes with active keyboard focus
    */
-  --box-selected-active-text-color: #{$white};
+   //    上方工具栏弹出框的按钮文字hover效果
+//   --box-selected-active-text-color: #{$white};
+  --box-selected-active-text-color: #000000;
 
   /**
    * Border color for selected boxes with active keyboard focus
