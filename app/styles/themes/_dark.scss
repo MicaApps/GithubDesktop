@@ -14,6 +14,7 @@
 $link-color: #2e8fff;
 
 body.theme-dark {
+  // 暂时已经确定,亮暗色的实现是通过直接改变预设变量的值实现的
   --color-new: #{$green};
   --color-deleted: #{$red};
   --color-modified: #{$yellow-700};
@@ -23,10 +24,15 @@ body.theme-dark {
   --text-color: #{$gray-100};
   --text-secondary-color: #{$gray-400};
   --text-secondary-color-muted: #{darken($gray-500, 10%)};
+  // 作为大部分的背景颜色,包括但不限于目前已知的:上方工具栏的弹出框的背景颜色,主背景颜色
   --background-color: #{$gray-900};
+  // --background-color: #2c2c2c87;
+  // --background-color: #2c2c2c;
 
   --button-background: #{$blue};
+  
   --button-hover-background: #{lighten($blue, 5%)};
+  
   --button-text-color: #{$white};
   --button-focus-border-color: #{$blue-600};
 
@@ -133,12 +139,16 @@ body.theme-dark {
   /**
    * Background color for selected boxes with active keyboard focus
    */
-  --box-selected-active-background-color: #{$blue};
+//    上方工具栏弹出框的按钮背景hover效果
+//   --box-selected-active-background-color: #{$blue};
+  --box-selected-active-background-color: rgba(255,255,255,0.0605);
 
   /**
    * Text color for selected boxes with active keyboard focus
    */
+//    上方工具栏弹出框的按钮文字hover效果
   --box-selected-active-text-color: #{$white};
+//   --box-selected-active-text-color: #000000;
 
   /**
    * Border color for selected boxes with active keyboard focus
@@ -197,7 +207,9 @@ body.theme-dark {
   --toolbar-button-secondary-color: var(--toolbar-text-secondary-color);
 
   --toolbar-button-hover-color: #{$white};
+//   上方工具栏的hover背景颜色
   --toolbar-button-hover-background-color: #{$gray-800};
+//   --toolbar-button-hover-background-color: red;
   --toolbar-button-hover-border-color: var(--toolbar-button-border-color);
 
   --toolbar-button-focus-background-color: #{$gray-800};
@@ -209,9 +221,11 @@ body.theme-dark {
   --toolbar-button-progress-color: #{$gray-800};
   --toolbar-button-focus-progress-color: #{$gray-700};
   --toolbar-button-hover-progress-color: #{$gray-700};
+
   --toolbar-dropdown-open-progress-color: #{$gray-200};
   --toolbar-dropdown-text-warning-color: #{$orange-600};
   --toolbar-dropdown-text-hover-color: #{$white};
+  --toolbar-dropdown-background-color: #2c2c2c87;
 
   --toolbar-tooltip-background-color: #{$gray-800};
   --toolbar-tooltip-shadow-color: black;
@@ -223,10 +237,16 @@ body.theme-dark {
   --app-menu-button-hover-color: var(--toolbar-button-hover-color);
   --app-menu-button-hover-background-color: var(--toolbar-button-hover-background-color);
   --app-menu-button-active-color: var(--text-color);
+  //顶部按钮激活时的颜色
   --app-menu-button-active-background-color: #{$gray-800};
   --app-menu-pane-color: var(--text-color);
   --app-menu-pane-secondary-color: var(--text-secondary-color);
-  --app-menu-pane-background-color: #{$gray-800};
+  // 顶部弹出框的背景颜色
+  // --app-menu-pane-background-color: #{$gray-800};
+  --app-menu-pane-background-color: rgba(44, 44, 46, 0.523);
+
+  --app-menu-pane-border-color:rgba(255, 255, 255, 0.0578);
+  // --app-menu-pane-background-color: red;
   --app-menu-divider-color: #{$gray-600};
 
   /**
@@ -367,8 +387,9 @@ body.theme-dark {
   --input-warning-text-color: var(--dialog-warning-color);
   --input-error-text-color: #{$red-300};
 
+  // 蒙层颜色
   /** Overlay is used as a background for both modals and foldouts */
-  --overlay-background-color: rgba(0, 0, 0, 0.5);
+  --overlay-background-color: rgba(255, 255, 255, 0);
 
   /** Dialog */
   --dialog-warning-color: #{$yellow-600};

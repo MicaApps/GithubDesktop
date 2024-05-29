@@ -20,7 +20,9 @@ export function getTitleBarHeight() {
     return isMacOSBigSurOrLater() ? 26 : 22
   }
 
-  return 28
+  // 上方工具栏的高度
+  return 40
+  // return 28
 }
 
 interface ITitleBarProps {

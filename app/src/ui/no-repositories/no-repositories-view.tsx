@@ -15,6 +15,8 @@ import { IAPIRepository } from '../../lib/api'
 import { assertNever } from '../../lib/fatal-error'
 import { ClickSource } from '../lib/list'
 
+import renderLabel from '../../internationalization'
+
 interface INoRepositoriesProps {
   /** A function to call when the user chooses to create a repository. */
   readonly onCreate: () => void
@@ -131,8 +133,8 @@ export class NoRepositoriesView extends React.Component<
       <UiView id="no-repositories">
         <section aria-label="Let's get started!">
           <header>
-            <h1>Let's get started!</h1>
-            <p>Add a repository to GitHub Desktop to start collaborating</p>
+            <h1>{ renderLabel("Let's get started!")}</h1>
+            <p>{ renderLabel("Add a repository to GitHub Desktop to start collaborating")}</p>
           </header>
 
           <div className="content">

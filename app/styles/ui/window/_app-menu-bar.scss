@@ -9,7 +9,6 @@
       text-decoration: underline;
     }
   }
-
   .toolbar-dropdown.open > .toolbar-button > button {
     background-color: var(--app-menu-button-active-background-color);
     color: var(--app-menu-button-active-color);
@@ -47,12 +46,17 @@
 
     .menu-pane {
       --background-color: var(--app-menu-pane-background-color);
+      // filter: blur(0.6px);
+      backdrop-filter: blur(20px);
+      box-shadow: 0px 8px 16px 0 rgba(0, 0, 0, 0.14);
       background: var(--background-color);
-
+      border: 1px solid var(--app-menu-pane-border-color);
+      border-radius: 0 0 7px 7px;
       --text-color: var(--app-menu-pane-color);
       color: var(--text-color);
 
       --text-secondary-color: var(--app-menu-pane-secondary-color);
+      margin-top: 2px;
 
       pointer-events: all;
     }

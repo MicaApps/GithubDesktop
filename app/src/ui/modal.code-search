@@ -1,0 +1,30 @@
+# Query: modal
+# Including: *.scss
+# Excluding: *.json
+# ContextLines: 1
+
+6 个结果 - 3 文件
+
+app\styles\_variables.scss:
+  470  
+  471:   /** Overlay is used as a background for both modals and foldouts */
+  472    --overlay-background-color: #{$overlay-background-color};
+
+app\styles\themes\_dark.scss:
+  369  
+  370:   /** Overlay is used as a background for both modals and foldouts */
+  371    --overlay-background-color: rgba(0, 0, 0, 0.5);
+
+app\styles\ui\_dialog.scss:
+  75  
+  76:     &.modal-enter {
+  77        opacity: 0 !important;
+  78      }
+  79:     &.modal-enter-active {
+  80        opacity: 0 !important;
+
+  83  
+  84:   // The modal class here is the transition name for the react css transition
+  85    // group which allows us to apply an animation when the popup appears.
+  86:   &.modal {
+  87      &-enter {
